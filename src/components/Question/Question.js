@@ -3,7 +3,7 @@ import Options from '../Options/Options';
 import swal from 'sweetalert';
 import { EyeIcon } from '@heroicons/react/24/solid'
 
-const Question = ({ qs }) => {
+const Question = ({ qs, index }) => {
 
     const [answer, setAnswer] = useState(false);
 
@@ -25,7 +25,8 @@ const Question = ({ qs }) => {
         <div className='bg-green-200 p-8 my-5 rounded-lg'>
 
             <div className='flex justify-between items-center'>
-                <h3 className='text-2xl font-semibold mb-5'>{question}</h3>
+                <h3 className='text-2xl font-semibold mb-5'>
+                    <span>{index + 1}.</span> {question}</h3>
                 <div onClick={() => setAnswer(!answer)}>
                     <EyeIcon className='h-6 w-6 text-gray-500'></EyeIcon>
                 </div>

@@ -10,11 +10,12 @@ const Questions = () => {
     console.log(questions);
     return (
         <div className='mx-8 md:mx-12'>
-            <h1>from questions</h1>
+            <h1 className='text-3xl text-center my-5'>Questions</h1>
             {
-                questions.map(qs => <Question
+                questions.map((qs, idx) => <Question
                     key={qs.id}
                     qs={qs}
+                    index={idx}
                 ></Question>)
             }
 
