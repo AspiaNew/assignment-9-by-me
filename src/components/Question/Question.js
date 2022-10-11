@@ -12,6 +12,7 @@ const Question = ({ qs }) => {
                 options.map((option, idx) => <Options
                     key={idx}
                     option={option}
+                    name={correctAnswer}
                 ></Options>)
             }
         </div>

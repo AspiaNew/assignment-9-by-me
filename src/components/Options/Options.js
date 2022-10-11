@@ -1,11 +1,15 @@
 import React from 'react';
 
-const Options = ({ option }) => {
-    // console.log(option)
+const Options = ({ option, name }) => {
+    console.log(option, name)
     return (
         <div>
-            <input type="radio" name="" id="" />
-            {option}
+            <p>
+                <label htmlFor={option}>
+                    <input type="radio" name={name} id={option} />
+                    {option}
+                </label>
+            </p>
         </div>
     );
 };
