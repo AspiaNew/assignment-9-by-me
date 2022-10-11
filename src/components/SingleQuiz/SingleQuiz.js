@@ -13,7 +13,7 @@ const SingleQuiz = ({ quiz }) => {
                     <h3 className='text-3xl'>{name}</h3>
                     <p>Total Quiz: {total}</p>
                 </div>
-                <div className='bg-green-700 text-white hover:bg-green-500 px-3 py-1 rounded '>
+                <div className='bg-green-700 text-white font-semibold hover:bg-green-600 px-3 py-1 rounded '>
                     <Link to={`/quiz/${id}`}><button >Start Quiz</button></Link>
                 </div>
             </div>

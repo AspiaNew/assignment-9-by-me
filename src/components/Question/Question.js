@@ -40,7 +40,7 @@ const Question = ({ qs }) => {
                     ></Options>)
                 }
             </div>
-            {answer ? <p className='text-xl bg-green-400 p-2 rounded ml-3 mt-3'>Correct Answer: {correctAnswer}</p> : ''}
+            {answer ? <p className='text-xl bg-green-400 p-2 ml-3 mt-3 rounded'>Correct Answer: {correctAnswer}</p> : ''}
         </div>
     );
 };
