@@ -1,24 +1,35 @@
 import React, { useState } from 'react';
 import Options from '../Options/Options';
+import swal from 'sweetalert';
+import { EyeIcon } from '@heroicons/react/24/solid'
 
 const Question = ({ qs }) => {
 
-    // const [answer, setAnswer] = useState(correctAnswer);
+    const [answer, setAnswer] = useState(false);
+
+
     // console.log(qs);
     const { correctAnswer, id, options, question } = qs;
 
     const handleOption = (option) => {
         if (option === correctAnswer) {
-            alert('right')
+            // alert('right')
+            swal('right')
         }
         else {
-            alert('wrong')
+            swal('wrong')
         }
     }
 
     return (
         <div className='bg-green-200 p-8 my-5 rounded-lg'>
-            <h3 className='text-2xl font-semibold mb-5'>{question}</h3>
+
+            <div className='flex justify-between items-center'>
+                <h3 className='text-2xl font-semibold mb-5'>{question}</h3>
+                <div onClick={() => setAnswer(!answer)}>
+                    <EyeIcon className='h-6 w-6 text-gray-500'></EyeIcon>
+                </div>
+            </div>
             <div className='grid md:grid-cols-2'>
                 {
                     options.map((option, idx) => <Options
@@ -29,6 +40,7 @@ const Question = ({ qs }) => {
                     ></Options>)
                 }
             </div>
+            {answer ? <p className='text-xl bg-green-400 p-2 rounded ml-3 mt-3'>Correct Answer: {correctAnswer}</p> : ''}
         </div>
     );
 };
