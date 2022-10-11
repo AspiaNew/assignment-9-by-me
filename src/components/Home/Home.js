@@ -5,7 +5,6 @@ import SingleQuiz from '../SingleQuiz/SingleQuiz';
 const Home = () => {
     const quizData = useLoaderData();
     const quizes = quizData.data;
-    console.log(quizes)
 
     return (
         <div className='m-8 md:m-12'>
