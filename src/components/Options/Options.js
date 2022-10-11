@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Options = ({ option, name }) => {
-    console.log(option, name)
+const Options = ({ option, name, handleOption }) => {
+    // console.log(option, name)
     return (
-        <div>
-            <p>
+        <div className='p-2 text-xl'>
+            <p onClick={() => handleOption(option)}>
                 <label htmlFor={option}>
                     <input type="radio" name={name} id={option} />
-                    {option}
+                    <span className='ml-2'>{option}</span>
                 </label>
             </p>
         </div>

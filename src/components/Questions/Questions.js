@@ -7,7 +7,7 @@ const Questions = () => {
     const questions = questionsData.data.questions;
     console.log(questions);
     return (
-        <div>
+        <div className='mx-8 md:mx-12'>
             <h1>from questions</h1>
             {
                 questions.map(qs => <Question
@@ -15,6 +15,7 @@ const Questions = () => {
                     qs={qs}
                 ></Question>)
             }
+
         </div>
     );
 };
