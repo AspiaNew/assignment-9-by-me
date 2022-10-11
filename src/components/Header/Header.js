@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import Path from '../Link/Path';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import Path from '../Path/Path';
 
 const Header = () => {
