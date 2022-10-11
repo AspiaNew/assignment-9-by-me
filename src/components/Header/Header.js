@@ -19,17 +19,17 @@ const Header = () => {
     ]
 
     return (
-        <nav className='bg-gray-200 flex justify-between md:px-10 py-3'>
+        <nav className='bg-green-400 text-white flex justify-between md:px-10 py-3'>
 
 
-            <h2 className='text-3xl mx-5'>IQ Tester </h2>
+            <h2 className='text-3xl font-bold mx-5'>IQ Tester </h2>
 
-            <button onClick={() => toggleBar(open)} className="h-8 w-8 text-blue-500 md:hidden mx-5">
+            <button onClick={() => toggleBar(open)} className="h-8 w-8 md:hidden mx-5">
                 {open ? <div><XMarkIcon></XMarkIcon></div> : <div><Bars3Icon></Bars3Icon></div>}
             </button>
 
 
-            <ul className={`bg-gray-200 flex flex-col md:flex-row absolute md:static w-full md:w-auto ${open ? 'top-14' : '-top-40'}`}>
+            <ul className={`bg-green-400 flex flex-col md:flex-row absolute md:static w-full md:w-auto pb-3 md:pb-1 ${open ? 'top-14' : '-top-40'}`}>
                 {
                     routes.map(route => <Path
                         key={route.id}

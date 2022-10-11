@@ -7,7 +7,7 @@ const SingleQuiz = ({ quiz }) => {
 
     return (
         <div className='border border-gray-400 rounded-lg'>
-            <img className='bg-gray-300 w-full rounded-lg' src={logo} alt="" />
+            <img className='bg-gray-400 w-full rounded-lg' src={logo} alt="" />
             <div className="flex justify-between items-center px-5 my-5">
                 <div className="quiz-details">
                     <h3 className='text-3xl'>{name}</h3>
