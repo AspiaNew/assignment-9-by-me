@@ -8,15 +8,17 @@ const Home = () => {
     console.log(quizes)
 
     return (
-        <div>
+        <div className='mx-12'>
             This is from home.
 
-            {
-                quizes.map(quiz => <SingleQuiz
-                    key={quiz.id}
-                    quiz={quiz}
-                ></SingleQuiz>)
-            }
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                {
+                    quizes.map(quiz => <SingleQuiz
+                        key={quiz.id}
+                        quiz={quiz}
+                    ></SingleQuiz>)
+                }
+            </div>
         </div>
     );
 };

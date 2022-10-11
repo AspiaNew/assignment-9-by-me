@@ -2,15 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SingleQuiz = ({ quiz }) => {
-    const { id, name, logo } = quiz;
+    const { id, name, logo, total } = quiz;
 
 
     return (
-        <div>
-            <img className='bg-gray-300' src={logo} alt="" />
-            <p>{name}</p>
-            <Link to={`/quiz/${id}`}><button className='bg-gray-300 px-3 py-1 rounded'>Start Quiz</button></Link>
-
+        <div className='border border-gray-400 p-1 rounded-lg'>
+            <img className='bg-gray-300 w-full rounded-lg' src={logo} alt="" />
+            <div className="flex justify-between items-center px-5 my-5">
+                <div className="quiz-details">
+                    <h3 className='text-3xl'>{name}</h3>
+                    <p>Total Quiz: {total}</p>
+                </div>
+                <div className='bg-green-700 text-white hover:bg-green-500 px-3 py-1 rounded '>
+                    <Link to={`/quiz/${id}`}><button >Start Quiz</button></Link>
+                </div>
+            </div>
         </div>
     );
 };
