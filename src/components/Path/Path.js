@@ -5,7 +5,7 @@ const Path = ({ route }) => {
     const { name, path } = route;
 
     //active link styles
-    let activeClassName = " border-b-4";
+    let activeClassName = "border-b-4";
     return (
         <div className='mx-auto py-1 hover:font-bold md:mx-5'>
             {/* <a href={path}>{name}</a> */}

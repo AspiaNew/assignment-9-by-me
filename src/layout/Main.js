@@ -5,10 +5,15 @@ import Header from '../components/Header/Header';
 
 const Main = () => {
     return (
-        <div>
+        <div className='min-h-screen relative'>
             <Header></Header>
-            <Outlet></Outlet>
-            <Footer></Footer>
+            <div className='pb-32'>
+                <Outlet></Outlet>
+            </div>
+            <div className='absolute bottom-0 w-full'>
+                <Footer></Footer>
+            </div>
+
         </div>
     );
 };
