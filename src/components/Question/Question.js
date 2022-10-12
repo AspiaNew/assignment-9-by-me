@@ -5,13 +5,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Question = ({ qs, index }) => {
+    const { correctAnswer, options, question } = qs;
 
+    // useState for show correct answer
     const [answer, setAnswer] = useState(false);
 
-
-    // console.log(qs);
-    const { correctAnswer, id, options, question } = qs;
-
+    // clickhandler for showing result toast
     const handleOption = (option) => {
         if (option === correctAnswer) {
             const notify = () => toast.success("Congratulations ! You choose the right answer :D");
@@ -25,7 +24,7 @@ const Question = ({ qs, index }) => {
 
     return (
         <div className='bg-green-200 p-8 pb-5 my-5 rounded-lg'>
-
+            {/* quiz name  */}
             <div className='flex justify-between items-center'>
                 <h3 className='text-2xl font-semibold mb-5'>
                     <span>Quiz {index + 1}.</span> {question}</h3>
@@ -33,6 +32,7 @@ const Question = ({ qs, index }) => {
                     <EyeIcon className='h-6 w-6 text-gray-500'></EyeIcon>
                 </div>
             </div>
+            {/* quiz options  */}
             <div className='grid md:grid-cols-2'>
                 {
                     options.map((option, idx) => <Options
@@ -43,8 +43,10 @@ const Question = ({ qs, index }) => {
                     ></Options>)
                 }
             </div>
-            {answer ? <p className='text-xl text-green-500 font-bold p-2 ml-3 rounded'>Correct Answer: {correctAnswer}</p> : <p className='text-xl p-2 ml-3 rounded invisible'>Correct Answer: {correctAnswer}</p>}
 
+            {/* show correct answer  */}
+            {answer ? <p className='text-xl text-green-500 font-bold p-2 ml-3 rounded'>Correct Answer: {correctAnswer}</p> : <p className='text-xl p-2 ml-3 rounded invisible'>Correct Answer: {correctAnswer}</p>}
+            {/* show result toast  */}
             <ToastContainer
                 position="top-center"
                 autoClose={3000}
@@ -57,7 +59,6 @@ const Question = ({ qs, index }) => {
                 pauseOnHover
                 theme="light"
             ></ToastContainer>
-
         </div>
     );
 };

@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Question from '../Question/Question';
 
 const Questions = () => {
-
-
     const questionsData = useLoaderData();
-    const { logo, name, questions } = questionsData.data;
-    // const questions = questionsData.data.questions;
-    console.log(logo, name, questions);
+    const { name, questions } = questionsData.data;
+
     return (
         <div className='mx-8 md:mx-12'>
             <h1 className='text-3xl md:text-6xl text-center my-5'>Quiz on <span className='font-bold text-blue-500'>{name}</span></h1>
@@ -20,7 +17,6 @@ const Questions = () => {
                     index={idx}
                 ></Question>)
             }
-
         </div>
     );
 };
