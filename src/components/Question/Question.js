@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Options from '../Options/Options';
 import swal from 'sweetalert';
 import { EyeIcon } from '@heroicons/react/24/solid';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Question = ({ qs, index }) => {
 
@@ -13,12 +15,12 @@ const Question = ({ qs, index }) => {
 
     const handleOption = (option) => {
         if (option === correctAnswer) {
-            // alert('right')
-            swal('Congratulations ! You choose the right answer :D');
-
+            const notify = () => toast.success("Congratulations ! You choose the right answer :D");
+            notify();
         }
         else {
-            swal('Sorry ! Your answer is not correct :(')
+            const notify = () => toast.error("Sorry ! Your answer is not correct :(");
+            notify();
         }
     }
 
@@ -43,6 +45,19 @@ const Question = ({ qs, index }) => {
                 }
             </div>
             {answer ? <p className='text-xl text-green-500 font-bold p-2 ml-3 rounded'>Correct Answer: {correctAnswer}</p> : <p className='text-xl p-2 ml-3 rounded invisible'>Correct Answer: {correctAnswer}</p>}
+
+            <ToastContainer
+                position="top-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            ></ToastContainer>
 
         </div>
     );

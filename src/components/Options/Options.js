@@ -4,9 +4,9 @@ const Options = ({ option, name, handleOption }) => {
     // console.log(option, name)
     return (
         <div className='p-2 text-xl'>
-            <p onClick={() => handleOption(option)}>
+            <p>
                 <label htmlFor={option}>
-                    <input type="radio" name={name} id={option} />
+                    <input onClick={() => handleOption(option)} type="radio" name={name} id={option} />
                     <span className='ml-2'>{option}</span>
                 </label>
             </p>

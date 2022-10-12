@@ -7,7 +7,7 @@ const Questions = () => {
 
     const questionsData = useLoaderData();
     const questions = questionsData.data.questions;
-    console.log(questions);
+    // console.log(questions);
     return (
         <div className='mx-8 md:mx-12'>
             <h1 className='text-3xl text-center my-5'>Questions</h1>
