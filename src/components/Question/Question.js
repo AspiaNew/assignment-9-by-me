@@ -22,11 +22,11 @@ const Question = ({ qs, index }) => {
     }
 
     return (
-        <div className='bg-green-200 p-8 my-5 rounded-lg'>
+        <div className='bg-green-200 p-8 pb-5 my-5 rounded-lg'>
 
             <div className='flex justify-between items-center'>
                 <h3 className='text-2xl font-semibold mb-5'>
-                    <span>{index + 1}.</span> {question}</h3>
+                    <span>Quiz {index + 1}.</span> {question}</h3>
                 <div onClick={() => setAnswer(!answer)}>
                     <EyeIcon className='h-6 w-6 text-gray-500'></EyeIcon>
                 </div>
@@ -41,7 +41,7 @@ const Question = ({ qs, index }) => {
                     ></Options>)
                 }
             </div>
-            {answer ? <p className='text-xl bg-green-400 p-2 ml-3 mt-3 rounded'>Correct Answer: {correctAnswer}</p> : ''}
+            {answer ? <p className='text-xl text-green-500 font-bold p-2 ml-3 rounded'>Correct Answer: {correctAnswer}</p> : <p className='text-xl p-2 ml-3 rounded invisible'>Correct Answer: {correctAnswer}</p>}
         </div>
     );
 };
