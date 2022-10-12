@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Options from '../Options/Options';
-import swal from 'sweetalert';
 import { EyeIcon } from '@heroicons/react/24/solid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

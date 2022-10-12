@@ -6,11 +6,13 @@ const Questions = () => {
 
 
     const questionsData = useLoaderData();
-    const questions = questionsData.data.questions;
-    // console.log(questions);
+    const { logo, name, questions } = questionsData.data;
+    // const questions = questionsData.data.questions;
+    console.log(logo, name, questions);
     return (
         <div className='mx-8 md:mx-12'>
-            <h1 className='text-3xl text-center my-5'>Questions</h1>
+            <h1 className='text-3xl md:text-6xl text-center my-5'>Quiz on <span className='font-bold text-blue-500'>{name}</span></h1>
+            <hr className='border-b-2' />
             {
                 questions.map((qs, idx) => <Question
                     key={qs.id}
