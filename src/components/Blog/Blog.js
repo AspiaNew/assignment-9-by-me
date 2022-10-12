@@ -23,7 +23,10 @@ const Blog = () => {
             </div>
             <div className='bg-green-200 p-5 rounded-lg my-5'>
                 <h3 className='text-2xl'>What is the useRef hook?</h3>
-                <p>useRef returns a mutable ref object whose current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.Essentially, useRef is like a 'box' that can hold a mutable value in its current property.</p>
+                <p>useRef returns a mutable ref object whose current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.Essentially, useRef is like a 'box' that can hold a mutable value in its current property. <br />
+                    If we tried to count how many times our application renders using the useState Hook, we would be caught in an infinite loop since this Hook itself causes a re-render.
+                    <br />
+                    But the useRef hook doesnot cause Re-render.</p>
             </div>
         </div>
     );
