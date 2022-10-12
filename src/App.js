@@ -8,6 +8,7 @@ import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
 import Main from './layout/Main';
 import Questions from './components/Questions/Questions';
+import ErrorElement from './components/ErrorElement/ErrorElement';
 
 function App() {
 
@@ -44,7 +45,8 @@ function App() {
           path: '/blog',
           element: <Blog></Blog>
         }
-      ]
+      ],
+      errorElement: <ErrorElement></ErrorElement>
     }
 
   ])
