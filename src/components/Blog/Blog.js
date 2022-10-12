@@ -3,6 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className='mt-8 mx-5 md:mx-12'>
+            <h2 className='text-3xl md:text-5xl text-center pb-5'>Welcome to our <span className='font-bold text-green-500'>blog</span></h2>
             <div className='bg-green-200 p-5 rounded-lg my-5'>
                 <h3 className='text-2xl'>What is the purpose of Ract Router?</h3>
                 <p>Answer: React Router enables 'client side routing'.In general websites,browser request documents from server many times as the clients request for it.After that it updates the UI according to the changes.But React router allows the app to update the URL from a link click without making another request. <br />
