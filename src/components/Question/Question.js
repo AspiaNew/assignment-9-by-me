@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Options from '../Options/Options';
 import swal from 'sweetalert';
-import { EyeIcon } from '@heroicons/react/24/solid'
+import { EyeIcon } from '@heroicons/react/24/solid';
 
 const Question = ({ qs, index }) => {
 
@@ -14,10 +14,11 @@ const Question = ({ qs, index }) => {
     const handleOption = (option) => {
         if (option === correctAnswer) {
             // alert('right')
-            swal('right')
+            swal('Congratulations ! You choose the right answer :D');
+
         }
         else {
-            swal('wrong')
+            swal('Sorry ! Your answer is not correct :(')
         }
     }
 
@@ -42,6 +43,7 @@ const Question = ({ qs, index }) => {
                 }
             </div>
             {answer ? <p className='text-xl text-green-500 font-bold p-2 ml-3 rounded'>Correct Answer: {correctAnswer}</p> : <p className='text-xl p-2 ml-3 rounded invisible'>Correct Answer: {correctAnswer}</p>}
+
         </div>
     );
 };
